@@ -24,23 +24,23 @@
 \setlength{\headheight}{15pt}
 
 % In case you need to adjust margins:
-\topmargin=-0.45in      %
-\evensidemargin=0in     %
-\oddsidemargin=0in      %
-\textwidth=6.5in        %
-\textheight=9.25in      %
-\headsep=0.25in         %
+\topmargin=-0.45in%
+\evensidemargin=0in%
+\oddsidemargin=0in%
+\textwidth=6.5in%
+\textheight=9.25in%
+\headsep=0.25in%
 
 % Setup the header and footer
-\pagestyle{fancy}                                                       %
-\lhead{\hmwkAuthor}		                                                %
-\chead{\hmwkClass ~ \hmwkTitle}											%
-\rhead{\firstxmark}                                                     %
-\lfoot{\lastxmark}                                                      %
-\cfoot{}                                                                %
-\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}}                  %
-\renewcommand\headrulewidth{0.4pt}                                      %
-\renewcommand\footrulewidth{0.4pt}                                      %
+\pagestyle{fancy}%
+\lhead{\hmwkAuthor}%
+\chead{\hmwkClass~\hmwkTitle}%
+\rhead{\firstxmark}%
+\lfoot{\lastxmark}%
+\cfoot{}%
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}}%
+\renewcommand\headrulewidth{0.4pt}%
+\renewcommand\footrulewidth{0.4pt}%
 
 % Adds a hyperlink to an email address.
 \newcommand{\mailto}[2]{\href{mailto:#1}{#2}}
@@ -127,13 +127,13 @@
 % The second parameter is the width of the figure normalized to column width
 %   (e.g. 0.5 for half a column, 0.75 for 75% of the column)
 % The third parameter is the caption.
-\newcommand{\scalefig}[3]{
+\newcommand{\scalefig}[3]{%
   \begin{figure}[ht!]
     % Requires \usepackage{graphicx}
     \centering
-	\fbox{
-	    \includegraphics[width=#2\columnwidth]{#1}
-	}
+    \fbox{%
+      \includegraphics[width=#2\columnwidth]{#1}
+    }
     %%% I think \captionwidth (see above) can go away as long as
     %%% \centering is above
     %\captionwidth{#2\columnwidth}%

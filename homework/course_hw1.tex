@@ -13,7 +13,7 @@
 
 % These commands set the document properties for the PDF output. Needs the hyperref package.
 \hypersetup
-{
+{%
     colorlinks,
     linkcolor={black},
     citecolor={black},
@@ -78,7 +78,7 @@ G_0(q) = \sum_{l=0}^\infty g(l)q^{-l}
 \end{align}
 in terms of the state space matrices $F$, $G$, $C$ and $D$ given in (\ref{eq:ss}).
 \newline
-\problemAnswer{
+\problemAnswer{%
 To go from a state space to the impulse response representation we apply an impulse as input where
 $$u(l) = \begin{cases} 1, & l=0 \\ 0, & l\neq 0 \end{cases}$$
 Substituting this into (\ref{eq:ss}) gives
@@ -109,7 +109,7 @@ g(N_1) & g(N_1+1) & \cdots & g(N_1+N_2-1)
 \end{align*}
 where $N_1,N_2>n$. Knowing that $[F,G,C]$ is controllable/observable, show that $\text{rank}(H)=n$, where $n$ is the order of the state space model.
 \newline
-\problemAnswer{
+\problemAnswer{%
 Recall that the observability matrix, $\mathcal{O}$, is
 $$\mathcal{O} = \left[\begin{array}{c} C \\ CF \\ CF^2 \\ \vdots \\ CF^{N_1-1} \end{array}\right]$$
 and the controllability matrix, $\mathcal{C}$, is
