@@ -33,7 +33,6 @@ jobs:
           python -m pip install --upgrade statick-tex
 
       - name: Install tools (Linux)
-        if: matrix.os == 'ubuntu-18.04'
         run: |
           sudo apt update
           sudo apt install chktex
