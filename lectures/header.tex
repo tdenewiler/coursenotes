@@ -11,16 +11,15 @@
 \newcommand{\mailto}[2]{\href{mailto:#1}{#2}}
 
 % These commands set the document properties for the PDF output. Needs the hyperref package.
-\hypersetup
-{
+\hypersetup{% chktex 1
     colorlinks,
     linkcolor={black},
     citecolor={black},
     filecolor={black},
     urlcolor={black},
-    pdfauthor={\scribe <\mailto{\scribeEmail}{\scribeEmail}>},
+    pdfauthor={\scribe<\mailto{\scribeEmail}{\scribeEmail}>},%
     pdfsubject={\course},
-	pdftitle={Course Title},
+    pdftitle={Course Title},
     pdfkeywords={},
     pdfstartpage={1},
 }
@@ -37,18 +36,18 @@
 % The second parameter is the width of the figure normalized to column width
 %   (e.g. 0.5 for half a column, 0.75 for 75% of the column)
 % The third parameter is the caption.
-\newcommand{\scalefig}[3]{
+\newcommand{\scalefig}[3]{%
   \begin{figure}[ht!]
     % Requires \usepackage{graphicx}
     \centering
-  \fbox{
+  \fbox{%
       \includegraphics[width=#2\columnwidth]{#1}
   }
     %%% I think \captionwidth (see above) can go away as long as
     %%% \centering is above
     %\captionwidth{#2\columnwidth}%
     \caption{#3}
-    \label{#1}
+    \label{#1}% chktex 24
   \end{figure}}
 
 % Includes a MATLAB script.
@@ -65,7 +64,7 @@
      {\bfseries}% Thm head font
      {}%        Punctuation after thm head
      {\newline}%     Space after thm head (\newline = linebreak)
-     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}%         Thm head spec
+     {\thmname{#1}\thmnumber{#2}\thmnote{#3}}% Thm head spec
 
    \theoremstyle{example}
    \newtheorem{example}{Example}[section]

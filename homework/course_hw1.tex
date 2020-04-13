@@ -12,14 +12,13 @@
 \newcommand{\hmwkAuthorEmail}{Student Email}
 
 % These commands set the document properties for the PDF output. Needs the hyperref package.
-\hypersetup
-{%
+\hypersetup{%
     colorlinks,
     linkcolor={black},
     citecolor={black},
     filecolor={black},
     urlcolor={blue},
-    pdfauthor={\hmwkAuthor <\mailto{\hmwkAuthorEmail}{\hmwkAuthorEmail}>},
+    pdfauthor={\hmwkAuthor<\mailto{\hmwkAuthorEmail}{\hmwkAuthorEmail}>},
     pdfsubject={\hmwkClass},
     pdftitle={\hmwkTitle},
     pdfkeywords={},
@@ -80,7 +79,11 @@ in terms of the state space matrices $F$, $G$, $C$ and $D$ given in (\ref{eq:ss}
 \newline
 \problemAnswer{%
 To go from a state space to the impulse response representation we apply an impulse as input where
-$$u(l) = \begin{cases} 1, & l=0 \\ 0, & l\neq 0 \end{cases}$$
+
+\begin{equation*}
+u(l) = \begin{cases} 1, & l=0 \\ 0, & l\neq 0 \end{cases}
+\end{equation*}
+
 Substituting this into (\ref{eq:ss}) gives
 \begin{align*}
 y(0) &= Cx(0) + Du(0) = D \\
@@ -111,18 +114,29 @@ where $N_1,N_2>n$. Knowing that $[F,G,C]$ is controllable/observable, show that 
 \newline
 \problemAnswer{%
 Recall that the observability matrix, $\mathcal{O}$, is
-$$\mathcal{O} = \left[\begin{array}{c} C \\ CF \\ CF^2 \\ \vdots \\ CF^{N_1-1} \end{array}\right]$$
+
+\begin{equation*}
+\mathcal{O} = \left[\begin{array}{c} C \\ CF \\ CF^2 \\ \vdots \\ CF^{N_1-1} \end{array}\right]
+\end{equation*}
+
 and the controllability matrix, $\mathcal{C}$, is
-$$\mathcal{C} = \left[\begin{array}{c c c c c} B & FB & F^2B & \cdots & F^{N_2-1}B \end{array}\right]$$
+
+\begin{equation*}
+\mathcal{C} = \left[\begin{array}{c c c c c} B & FB & F^2B & \cdots & F^{N_2-1}B \end{array}\right]
+\end{equation*}
+
 Letting $H=\mathcal{O}\cdot\mathcal{C}$ gives
-$$H = \left[\begin{array}{c c c c c}
+
+\begin{equation*}
+H = \left[\begin{array}{c c c c c}
 CG & CFG & CF^2G & \cdots & CF^{N_2}G \\
 CFG & CF^2G & CF^3G & \cdots & CF^{N_2+1}G \\
 CF^2G & CF^3G & CF^4G & \cdots & CF^{N_2+2}G \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 CF^{N_1}G & CF^{N_1+1}G & CF^{N_1+2}G & \cdots & CF^{N_1+N_2-1}G
 \end{array}\right]
-$$
+\end{equation*}
+
 Then, looking at the Markov parameters we have, using the results from Problem 1.1,
 \begin{align*}
 g(1) &= CG \\
